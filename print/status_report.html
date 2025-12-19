@@ -194,7 +194,7 @@
             </p>
             <p>
                 La arquitectura se divide en tres pilares fundamentales: <strong>Escapemaster API</strong> (el motor backend), 
-                <strong>Escapemaster Web</strong> (la interfaz para los clientes y dueños de salas) y <strong>Flama</strong>, 
+                <strong>Escapemaster Web</strong> (la interfaz para los clientes y dueños de salas) y <strong>Escapemaster Admin</strong>, 
                 nuestra consola de superadministración diseñada para gestionar el crecimiento de la plataforma y dar soporte a múltiples organizaciones simultáneamente.
             </p>
 
@@ -221,7 +221,7 @@
                     <span style="font-size: 0.9em; color: #666;">
                         <strong>Cómo funciona:</strong> En lugar de roles estáticos, hemos creado un sistema de 33 permisos atómicos (ej: <code>users:create</code>, <code>reports:view</code>). Los administradores pueden crear "Roles" que son agrupaciones personalizadas de estos permisos, permitiendo una flexibilidad total.
                         <br>
-                        <strong>Implementación:</strong> <code>escapemaster-api</code> (Módulo de Auth) y <code>Flama</code> (Interfaz de gestión).
+                        <strong>Implementación:</strong> <code>escapemaster-api</code> (Módulo de Auth) y <code>Escapemaster Admin</code> (Interfaz de gestión).
                     </span>
                 </div>
             </div>
@@ -229,7 +229,7 @@
             <div class="roadmap-item">
                 <div class="roadmap-icon">✓</div>
                 <div>
-                    <strong>3. Flama Console (Superadmin)</strong>
+                    <strong>3. Escapemaster Admin Console (Superadmin)</strong>
                     <br>
                     <span style="font-size: 0.9em; color: #666;">
                         <strong>Cómo funciona:</strong> Una aplicación completamente aislada diseñada para los dueños de la plataforma. Consume endpoints privilegiados <code>/admin</code> que no están expuestos a los usuarios normales. Permite gestionar suscripciones, suspender cuentas y auditar el sistema globalmente.
@@ -304,7 +304,7 @@
             <div class="roadmap-item">
                 <div class="roadmap-icon">4</div>
                 <div>
-                    <strong>Dashboard Global en Flama</strong>
+                    <strong>Dashboard Global en Escapemaster Admin</strong>
                     <br>Finalización de la vista agregada de reservas en la consola de superadministración para monitorizar la salud de todos los tenants en tiempo real.
                 </div>
             </div>

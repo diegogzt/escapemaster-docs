@@ -1,13 +1,13 @@
-# Flama - The Superadmin Console
+# Escapemaster Admin - The Superadmin Console
 
 ## 1. Introduction
-**Flama** (Escapemaster Manage) is the administrative command center for the entire Escapemaster platform. While Escapemaster Web is for hotel staff, Flama is for the platform owners and support team. It provides god-mode access to configure organizations, manage subscriptions, and oversee system health.
+**Escapemaster Admin** (Escapemaster Manage) is the administrative command center for the entire Escapemaster platform. While Escapemaster Web is for hotel staff, Escapemaster Admin is for the platform owners and support team. It provides god-mode access to configure organizations, manage subscriptions, and oversee system health.
 
 ## 2. Security & Architecture
-Flama is built as a completely separate Next.js application from Escapemaster Web. This physical separation ensures:
+Escapemaster Admin is built as a completely separate Next.js application from Escapemaster Web. This physical separation ensures:
 - **Security Isolation**: Admin routes are not even present in the client-facing bundle.
-- **Distinct Auth Flows**: Flama uses a separate admin authentication guard.
-- **Dedicated API Access**: Flama interacts with privileged `/admin/*` endpoints that are inaccessible to standard users.
+- **Distinct Auth Flows**: Escapemaster Admin uses a separate admin authentication guard.
+- **Dedicated API Access**: Escapemaster Admin interacts with privileged `/admin/*` endpoints that are inaccessible to standard users.
 
 ---
 
@@ -25,7 +25,7 @@ This module handles the end-to-end lifecycle of a client (Hotel).
 3. **Suspension/Termination**: One-click "Kill Switch" to suspend access for non-payment or policy violations.
 
 ### 3.2 Advanced User & Role Management
-Flama provides a cross-organizational view of all users.
+Escapemaster Admin provides a cross-organizational view of all users.
 - **Global User Search**: Find any user across any organization by email or name.
 - **Role Injection**: Administrators can inject themselves into any organization to provide support (Impersonation).
 - **Permission Matrix Editor**: A visual interface to define what each Role can do.
@@ -42,7 +42,7 @@ Flama provides a cross-organizational view of all users.
 ---
 
 ## 4. UI/UX Design System
-Flama uses a distinct visual identity from Escapemaster Web to prevent confusion.
+Escapemaster Admin uses a distinct visual identity from Escapemaster Web to prevent confusion.
 - **Color Scheme**: Uses a professional "Forest Green" & "Beige" palette (`#1F6357`, `#E8F5F3`) to convey stability and authority.
 - **Layout**: A dense, data-heavy layout optimized for desktop monitors.
 - **Components**: Heavy usage of Data Tables with advanced filtering, sorting, and bulk actions.
