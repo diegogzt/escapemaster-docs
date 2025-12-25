@@ -14,12 +14,13 @@ Escapemaster API serves as the central nervous system for the Escapemaster hospi
 ### 1.2 Directory Structure
 ```
 /app
-├── core/           # Global configs, security, and exceptions
-├── db/             # Database connection and base models
+├── config.py       # Global configs and environment variables
+├── database.py     # Database connection and session management
 ├── models/         # SQLAlchemy ORM models (Users, Orgs, Roles)
 ├── schemas/        # Pydantic schemas for request/response
-├── api/            # Route handlers grouped by module
+├── routes/         # Route handlers grouped by module
 ├── services/       # Business logic layer
+├── dependencies/   # FastAPI dependencies (Auth, Permissions)
 └── main.py         # Application entry point
 ```
 
