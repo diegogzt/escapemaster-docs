@@ -16,12 +16,14 @@ The Escapemaster platform is composed of four main repositories:
 ## 🌟 Recent Updates (December 2025)
 
 ### Frontend (Web)
+
 - **Dynamic Theming System**: Implementation of a global theme context with 8+ predefined themes (Twilight, Tropical, Vista, etc.).
 - **Modular Dashboard**: New widget-based architecture using DnD Kit for layout customization.
 - **Advanced Reports**: Enhanced filtering and visualization for revenue and occupancy.
 - **Auth Stability**: Critical fixes in authentication flow and session management.
 
 ### Backend (API)
+
 - **Widget System**: New endpoints and models for managing dashboard widgets and user collections.
 - **RBAC Enhancements**: Refinement of roles and permissions system.
 - **Dashboard Mocks**: Base structure for statistics and revenue endpoints ready for frontend integration.
