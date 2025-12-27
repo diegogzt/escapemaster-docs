@@ -15,18 +15,20 @@ The Escapemaster platform is composed of four main repositories:
 
 ## 🌟 Recent Updates (December 2025)
 
-### Frontend (Web)
+### Frontend (Web & Admin)
 
+- **Full Rebranding**: All modules migrated to the **Escapemaster** brand.
+- **HR Management**: New sections for staff management, vacations, and time tracking.
+- **Mobile Optimization**: Overhauled UI for mobile devices and touch interactions.
 - **Dynamic Theming System**: Implementation of a global theme context with 8+ predefined themes (Twilight, Tropical, Vista, etc.).
 - **Modular Dashboard**: New widget-based architecture using DnD Kit for layout customization.
-- **Advanced Reports**: Enhanced filtering and visualization for revenue and occupancy.
-- **Auth Stability**: Critical fixes in authentication flow and session management.
 
 ### Backend (API)
 
-- **Widget System**: New endpoints and models for managing dashboard widgets and user collections.
-- **RBAC Enhancements**: Refinement of roles and permissions system.
-- **Dashboard Mocks**: Base structure for statistics and revenue endpoints ready for frontend integration.
+- **HR Backend**: Implemented modules for Vacations and Timeclock.
+- **Enhanced Room Data**: Room responses now include pending bookings and next sessions.
+- **SMTP Integration**: Switched to Hostinger SMTP for reliable email delivery.
+- **RBAC Enhancements**: Refinement of roles and permissions system across all modules.
 
 ## 🚀 Getting Started
 

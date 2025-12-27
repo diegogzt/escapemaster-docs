@@ -12,7 +12,7 @@ graph TD
     API -->|SQLAlchemy| DB[(Supabase PostgreSQL)]
     API -->|Supabase-py| Storage[Supabase Storage]
     API -->|Stripe SDK| Stripe[Stripe Payments]
-    API -->|Resend SDK| Email[Resend Emails]
+    API -->|SMTP| Email[Hostinger SMTP]
 ```
 
 ## 🛠️ Tech Stack
@@ -26,6 +26,7 @@ graph TD
 | **Migrations** | Alembic | Database schema version control |
 | **Validation** | Pydantic v2 | Data validation and serialization |
 | **Auth** | JWT (python-jose) | Stateless authentication |
+| **Email** | SMTP (Hostinger) | Transactional email delivery |
 
 ## 📂 Project Structure
 
@@ -41,16 +42,22 @@ escapemaster-api/
 │   ├── models/           # SQLAlchemy ORM Models
 │   │   ├── user.py       # User & Permission models
 │   │   ├── organization.py # Tenant models
+│   │   ├── vacation.py   # HR: Vacation requests
+│   │   ├── timeclock.py  # HR: Staff clock-in/out
 │   │   └── ...
 │   │
 │   ├── schemas/          # Pydantic Schemas (Request/Response DTOs)
 │   │   ├── auth.py
 │   │   ├── booking.py
+│   │   ├── vacation.py
+│   │   ├── timeclock.py
 │   │   └── ...
 │   │
 │   ├── routes/           # API Controllers (Endpoints)
 │   │   ├── auth.py       # Login, Register, Password Reset
 │   │   ├── bookings.py   # Reservation management
+│   │   ├── vacations.py  # HR: Vacation management
+│   │   ├── timeclock.py  # HR: Time tracking
 │   │   └── ...
 │   │
 │   ├── services/         # Business Logic Layer
@@ -79,12 +86,15 @@ escapemaster-api/
 1.  **Advanced Permissions:**
     - Apply `@require_permission` decorator to all protected endpoints.
     - Ensure strict tenant isolation testing.
-2.  **Payments Integration:**
+2.  **HR Management:**
+    - Implemented Vacation and Timeclock modules.
+    - Integrated with RBAC for staff management.
+3.  **Payments Integration:**
     - Finalize Stripe Webhook handler (`/webhooks/stripe`).
     - Implement subscription status syncing with the database.
-3.  **Notifications System:**
+4.  **Notifications System:**
     - Create HTML templates for booking confirmations and reminders.
-    - Integrate Resend for reliable delivery.
+    - Switched to SMTP (Hostinger) for reliable delivery.
 
 ### Phase 3: Reliability & Scale
 1.  **Testing Strategy:**
