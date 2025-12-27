@@ -1,5 +1,19 @@
 # Changelog
 
+## 2025-12-28
+
+- **Web:** Replaced the main landing page with a "Coming Soon" / "In Development" page.
+- **Web:** Integrated GSAP for high-quality animations on the new landing page.
+- **Web:** Removed public login/register buttons from the landing page while keeping `/login` accessible via direct URL.
+- **Web:** Created a backup branch `feature/original-landing` containing the previous landing page.
+- **Mobile:** Implemented a multi-theme system (Tropical, Twilight, Vista, Mint, Sunset, Ocean, Lavender, Fire) matching the web version.
+- **Mobile:** Added theme persistence using Zustand and AsyncStorage.
+- **Mobile:** Refactored all main screens (Dashboard, Rooms, Calendar, Login, Register) to use theme-aware Tailwind classes (`bg-primary`, `text-primary`, etc.).
+- **Mobile:** Fixed iOS-specific crash in the registration flow by optimizing `KeyboardAvoidingView` behavior.
+- **Mobile:** Implemented permission-based UI logic using a new `usePermissions` hook.
+- **API:** Deployed missing `/dashboard/summary` endpoint to production server to fix 404 errors in the mobile app.
+- **API:** Updated production environment via SSH and Docker container restart.
+
 ## 2025-12-27
 
 - **General:** Completed rebranding of all modules (Web, Admin, API, UI Kit) to **Escapemaster**.
@@ -17,6 +31,8 @@
 - **Admin:** Initialized testing infrastructure with Vitest and updated UI for rebranding.
 - **UI Kit:** Added "Vista" color palette and enhanced visibility controls for components.
 - **Docs:** Updated `master.agent.md` with SSH access instructions for the API server.
+- **Deployment:** Successfully deployed all components (Web, Admin, API) to production environments.
+- **Deployment:** Configured API server on VPS with Docker and Nginx reverse proxy on port 8001.
 
 ## 2025-12-26
 
