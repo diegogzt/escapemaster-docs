@@ -2,6 +2,9 @@
 
 ## 2025-12-28
 
+- **Web:** Expanded the "Coming Soon" landing page with detailed sections: Features, Customization, and Early Access Waitlist.
+- **Web:** Integrated GSAP ScrollTrigger for scroll-based animations on the landing page.
+- **Web:** Added a functional signup form for the waitlist.
 - **Web:** Replaced the main landing page with a "Coming Soon" / "In Development" page.
 - **Web:** Integrated GSAP for high-quality animations on the new landing page.
 - **Web:** Removed public login/register buttons from the landing page while keeping `/login` accessible via direct URL.
