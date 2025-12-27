@@ -1,5 +1,23 @@
 # Changelog
 
+## 2025-12-27
+
+- **General:** Completed rebranding of all modules (Web, Admin, API, UI Kit) to **Escapemaster**.
+- **General:** Updated API URL to `https://api.escapemaster.es` across all services and environment variables.
+- **API:** Synchronized Supabase database with SQLAlchemy models (added `vacations` table and HR-related fields in `users` and `timeclock`).
+- **API:** Enhanced room response with pending bookings and next sessions.
+- **API:** Switched email service to SMTP (Hostinger) for better reliability.
+- **API:** Implemented HR management backend (Vacations and Timeclock modules).
+- **API:** Updated multiple routes (Bookings, Coupons, Organizations, Roles, Rooms, TPV, Webhooks) for consistency and new features.
+- **Web:** Removed width constraints (`max-w-4xl`) in dashboard pages (Rooms, Bookings, Docs) for full-width layout.
+- **Web:** Migrated Next.js middleware to `proxy.ts` to eliminate deprecated warnings and maintain E2E flows.
+- **Web:** Mobile UI overhaul, including calendar fixes (weekly list default view) and touch-friendly improvements.
+- **Web:** Added advanced filters to the bookings page (rooms, dates, status).
+- **Web:** Implemented new frontend sections for HR management: `/hr-management`, `/time-tracking`, and `/roles`.
+- **Admin:** Initialized testing infrastructure with Vitest and updated UI for rebranding.
+- **UI Kit:** Added "Vista" color palette and enhanced visibility controls for components.
+- **Docs:** Updated `master.agent.md` with SSH access instructions for the API server.
+
 ## 2025-12-26
 
 - **Security (API):** Removed default Super Admin credentials (now required via env), enforced JWT `type=access`, and reduced token error leakage.

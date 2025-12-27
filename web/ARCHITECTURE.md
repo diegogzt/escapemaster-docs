@@ -38,6 +38,9 @@ src/
 │   │   └── register/
 │   ├── (dashboard)/        # Route Group: Protected App
 │   │   ├── bookings/
+│   │   ├── hr-management/  # HR: Staff & Vacations
+│   │   ├── time-tracking/  # HR: Timeclock
+│   │   ├── roles/          # RBAC Management
 │   │   ├── settings/
 │   │   └── page.tsx        # Dashboard Home
 │   └── layout.tsx          # Root Layout (Providers)
@@ -83,8 +86,10 @@ The application implements a robust theming system using CSS Variables and Tailw
 ### Phase 2: Integration (Current)
 
 1.  **Widget Data Binding:** Connect `StatsCards`, `RevenueChart`, etc., to real API endpoints.
-2.  **Settings Module:** Create forms for updating Organization details and managing Locations.
-3.  **Booking Management:** Implement the full CRUD interface for bookings (Calendar View & List View).
+2.  **HR & Roles:** Implemented management interfaces for staff, vacations, and RBAC.
+3.  **Mobile Optimization:** Overhauled UI for mobile devices and touch interactions.
+4.  **Settings Module:** Create forms for updating Organization details and managing Locations.
+5.  **Booking Management:** Implement the full CRUD interface for bookings (Calendar View & List View).
 
 ### Phase 3: Advanced Features
 
