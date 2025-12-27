@@ -2,6 +2,11 @@
 
 ## 2025-12-28
 
+- **Web:** Updated the "Coming Soon" landing page to the **Tropical** theme with a new color palette (Emerald/Amber).
+- **Web:** Added a dedicated section for the upcoming **iOS and Android** mobile apps.
+- **Web:** Fixed public access to legal pages (`/privacy`, `/cookies`) by whitelisting them in the authentication context.
+- **Web:** Styled legal pages to match the Tropical theme.
+- **Deployment:** Deployed the updated landing page to production on Vercel.
 - **Web:** Expanded the "Coming Soon" landing page with detailed sections: Features, Customization, and Early Access Waitlist.
 - **Web:** Created Privacy Policy and Cookies Policy pages with detailed information on data handling and cookie usage (auth tokens, preferences).
 - **Web:** Integrated GSAP ScrollTrigger for scroll-based animations on the landing page.
