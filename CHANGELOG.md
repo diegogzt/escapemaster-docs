@@ -3,6 +3,7 @@
 ## 2025-12-28
 
 - **Web:** Expanded the "Coming Soon" landing page with detailed sections: Features, Customization, and Early Access Waitlist.
+- **Web:** Created Privacy Policy and Cookies Policy pages with detailed information on data handling and cookie usage (auth tokens, preferences).
 - **Web:** Integrated GSAP ScrollTrigger for scroll-based animations on the landing page.
 - **Web:** Added a functional signup form for the waitlist.
 - **Web:** Replaced the main landing page with a "Coming Soon" / "In Development" page.
