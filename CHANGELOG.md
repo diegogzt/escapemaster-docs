@@ -1,7 +1,51 @@
 # Changelog
 
+## 2026-01-03 (Evening)
+
+- **Web:** Refactorización completa para eliminar todos los datos mock hardcoded.
+  - `bookings/page.tsx`: Usa `bookingsApi.list()` en lugar de `MOCK_BOOKINGS`
+  - `bookings/[id]/page.tsx`: Usa `bookingsApi.get()` en lugar de `MOCK_BOOKING_DETAILS`
+  - `calendar/page.tsx`: Usa API real en lugar de `generateMockSessions()`
+  - `reports/page.tsx`: Obtiene datos reales de la API en lugar de constantes mock
+  - `calendar-widget.tsx`: Obtiene salas desde la API
+  - `revenue-table.tsx`: Obtiene transacciones desde `bookingsApi`
+- **Web:** Actualizado `api.ts` para manejar respuestas paginadas (`.bookings`, `.rooms`).
+- **Web:** Implementados estados de carga y error en todas las páginas refactorizadas.
+- **Despliegue:** Desplegada la web actualizada a producción en Vercel.
+
+## 2026-01-04
+
+- **Mobile:** Auditoría extensa de UI/UX completada. Refactorizado el sistema de colores a variables semánticas y estandarizado el feedback táctil.
+- **Mobile:** Refactorizado el flujo de autenticación (Login, Registro, Recuperación) para mayor consistencia visual y mejor manejo de teclado.
+- **Mobile:** Implementada suite de pruebas con Vitest y React Testing Library. Añadidos tests para servicios API, hooks y componentes.
+- **Mobile:** Nuevo componente `StatusBadge` para visualización estandarizada de estados.
+- **Mobile:** Mejorada la consistencia en las pantallas de Dashboard, Calendario, Salas y Reservas.
+
+## 2026-01-03
+
+- **Mobile:** Implementada vista semanal en el calendario. Ahora los usuarios pueden alternar entre vista diaria y semanal, con las sesiones agrupadas por día.
+- **Mobile:** Expandido el Dashboard con nuevos widgets: Gráfico de Reservas, Salas Populares y Tasa de Ocupación.
+- **Mobile:** Corregido error 401 ruidoso en los logs al iniciar la aplicación sin sesión activa.
+- **API:** Añadido soporte para filtrado por rango de fechas (`date_from`, `date_to`) en el listado de reservas.
+
+## 2025-12-31
+
+- **Web:** Implementado sistema de configuración de widgets en el dashboard. Ahora los usuarios pueden elegir qué estadísticas visualizar (Ingresos, Reservas, Ocupación, Ticket Medio).
+- **Admin:** Rediseño completo del formulario de creación de usuarios para evitar solapamientos y mejorar la accesibilidad en dispositivos móviles.
+- **API:** Corregido error en la creación de usuarios. Se ha implementado el hashing de contraseñas (bcrypt) y se ha hecho obligatorio el campo `full_name`.
+- **API:** Ejecutada migración de base de datos para añadir la columna `hashed_password` a la tabla `users`.
+- **Despliegue:** Actualizadas las aplicaciones Web y Admin en Vercel (Next.js 16.1.0).
+- **Despliegue:** Actualizada la API en el servidor de producción mediante SSH y Docker.
+
 ## 2025-12-28
 
+- **Web:** Implemented high-end animations inspired by industry leaders (GSAP, Lusion, Gianluca Jahn).
+- **Web:** Added **Magnetic Button** effect to the main CTA for improved interactivity.
+- **Web:** Integrated **Mouse Parallax** background effects for a sense of depth.
+- **Web:** Enhanced text reveal animations with skew and stagger effects.
+- **Web:** Refined scroll-based animations using GSAP ScrollTrigger with scale and smooth easing.
+- **Web:** Updated Tailwind classes to the latest standards (e.g., `bg-linear-to-b`).
+- **Deployment:** Deployed the enhanced landing page to production on Vercel.
 - **Web:** Updated the "Coming Soon" landing page to the **Tropical** theme with a new color palette (Emerald/Amber).
 - **Web:** Added a dedicated section for the upcoming **iOS and Android** mobile apps.
 - **Web:** Fixed public access to legal pages (`/privacy`, `/cookies`) by whitelisting them in the authentication context.
