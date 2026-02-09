@@ -43,7 +43,7 @@ src/
 Currently, the UI Kit is consumed via Git submodule or direct repository cloning. The roadmap includes packaging it as a private NPM package.
 
 1.  **Build:** `npm run build` generates a `dist/` folder with compiled JS and type definitions (`.d.ts`).
-2.  **Consumption:** Consumer apps import components like `import { Button } from 'escapemaster-ui-kit'`.
+2.  **Consumption:** Consumer apps import components like `import { Button } from 'manager/ui-kit'`.
 
 ## 🚧 Pending Development Phases
 

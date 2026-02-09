@@ -1,5 +1,40 @@
 # Changelog
 
+## 2025-01-15
+
+### B2B Onboarding - Sistema Completo de Verificación KYB
+
+- **Database:** Ejecutada migración masiva con 26 nuevas tablas para soportar onboarding B2B y marketplace B2C.
+  - Nuevas tablas KYB: `organization_kyb_documents`, `organization_bank_accounts`
+  - Sistema de pagos: `payouts`, `payout_bookings`
+  - Marketplace: `players`, `player_preferences`, `xp_transactions`, `player_credits`
+  - Social: `squads`, `squad_members`, `squad_invitations`
+  - Reviews: `reviews`, `room_photos`
+  - Gamification: `achievements`, `player_achievements`
+  - Split Payment: `split_payment_lobbies`, `split_payment_participants`
+  - Collections: `curated_collections`, `collection_rooms`
+  - Extras: `room_extras`, `booking_extras`
+
+- **API - B2B Endpoints:**
+  - `/kyb/*` - Gestión de documentos KYB, verificación CIF, cuentas bancarias con validación IBAN
+  - `/payouts/*` - Liquidaciones semanales, historial de pagos, facturas
+
+- **API - B2C Endpoints:**
+  - `/players/*` - Perfiles de jugador, XP, rangos, preferencias
+  - `/squads/*` - Creación de grupos, invitaciones, gestión de miembros
+  - `/reviews/*` - Reviews con ratings múltiples, fotos, moderación
+  - `/achievements/*` - Sistema de logros con progreso y desbloqueo automático
+  - `/split-payment/*` - Pagos divididos para reservas grupales
+  - `/marketplace/*` - Búsqueda de salas, colecciones curadas, descubrimiento
+
+- **Admin UI:**
+  - Nueva página `/kyb` - Panel de verificación de documentos KYB con preview, aprobación/rechazo
+  - Nueva página `/payouts` - Gestión de liquidaciones semanales a empresas
+  - Actualizado Sidebar con sección "Onboarding B2B"
+
+- **Models & Schemas:** 8 nuevos archivos de modelos SQLAlchemy, 5 nuevos schemas Pydantic
+- **Triggers DB:** Auto-actualización de rangos según XP, actualización de stats de salas en reviews
+
 ## 2026-01-03 (Evening)
 
 - **Web:** Refactorización completa para eliminar todos los datos mock hardcoded.
